@@ -1,0 +1,55 @@
+{
+    "name": "framework7",
+    "version": "1.0.0",
+    "description": "Framework7 Studio",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "postinstall": "install-app-deps",
+        "pack": "build --dir",
+        "dist": "build"
+    },
+    "build": {
+        "appId": "com.nowdb.studio",
+        "dmg": {
+            "contents": [
+                {
+                    "x": 110,
+                    "y": 150
+                },
+                {
+                    "x": 240,
+                    "y": 150,
+                    "type": "link",
+                    "path": "/Applications"
+                }
+            ]
+        },
+        "linux": {
+            "target": [
+                "AppImage",
+                "deb"
+            ]
+        },
+        "win": {
+            "target": "NSIS",
+            "icon": "f7builder/img/favicon.png"
+        }
+    },
+    "repository": "",
+    "keywords": [
+        "NowDB",
+        "Studio",
+        "Framework7",
+        "tools"
+    ],
+    "author": "SB Academy <taufiksu@gmail.com, aseprizal70@gmail.com>",
+    "license": "CC0-1.0",
+    "devDependencies": {
+        "electron": "^1.8.4",
+        "electron-builder": "^20.10.0"
+    },
+    "dependencies": {
+        "electron-packager": "^12.0.1"
+    }
+}
